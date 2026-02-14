@@ -4,224 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عشوائيات حمزة - Mystery Box</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Cairo', sans-serif;
-        }
-
-        :root {
-            --primary-color: #4f46e5; /* أزرق ملكي */
-            --secondary-color: #7c3aed; /* بنفسجي حديث */
-            --dark-bg: #0f172a; /* كحلي غامق جداً */
-            --text-main: #f8fafc;
-            --accent-color: #06b6d4; /* سماوي متوهج */
-        }
-
-        body {
-            background-color: var(--dark-bg);
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(124, 58, 237, 0.15) 0px, transparent 50%);
-            color: var(--text-main);
-            min-height: 100vh;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        /* Navigation Header */
-        header {
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(12px);
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 900;
-            color: #fff;
-            text-decoration: none;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #cbd5e1;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-content h1 span {
-            color: var(--accent-color);
-            text-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            color: #94a3b8;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            padding: 16px 35px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(79, 70, 229, 0.6);
-        }
-
-        /* 3D Box Styling */
-        .mystery-box-3d {
-            width: 250px;
-            height: 250px;
-            position: relative;
-            transform-style: preserve-3d;
-            animation: float 5s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotateY(0); }
-            50% { transform: translateY(-30px) rotateY(20deg); }
-        }
-
-        .box-face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(30, 41, 59, 0.8);
-            border: 2px solid var(--primary-color);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 0 30px rgba(79, 70, 229, 0.2);
-        }
-
-        /* Features */
-        .features {
-            max-width: 1200px;
-            margin: 6rem auto;
-            padding: 0 2rem;
-        }
-
-        .section-title { text-align: center; margin-bottom: 4rem; }
-        .section-title h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: rgba(30, 41, 59, 0.5);
-            padding: 2.5rem;
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: 0.3s;
-            text-align: center;
-        }
-
-        .feature-card:hover {
-            background: rgba(30, 41, 59, 0.8);
-            border-color: var(--accent-color);
-            transform: translateY(-10px);
-        }
-
-        .feature-icon { font-size: 3rem; margin-bottom: 1rem; display: block; }
-
-        /* Pricing Card */
-        .pricing-card {
-            background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 1));
-            padding: 4rem 2rem;
-            border-radius: 30px;
-            border: 1px solid var(--primary-color);
-            max-width: 500px;
-            margin: 4rem auto;
-            text-align: center;
-        }
-
-        .price-tag {
-            font-size: 4rem;
-            font-weight: 900;
-            color: var(--accent-color);
-            margin: 1.5rem 0;
-        }
-
-        footer {
-            padding: 3rem;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: #64748b;
-        }
-
-        @media (max-width: 768px) {
-            .hero { grid-template-columns: 1fr; text-align: center; }
-            .hero-content h1 { font-size: 2.5rem; }
-            .nav-links { display: none; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -240,7 +24,7 @@
             <h1>اكتشف <span>الحظ</span> داخل كل صندوق</h1>
             <p>مع عشوائيات حمزة، كل طلب هو مغامرة جديدة. صناديق مختارة بعناية تحتوي على مفاجآت تقنية، ترفيهية، وهدايا قيمة.</p>
             <div class="cta-group">
-                <a href="#pricing" class="btn btn-primary">اطلب صندوقك الآن 🔥</a>
+                <button onclick="openModal()" class="btn btn-primary main-cta">اطلب صندوقك الآن 🔥</button>
             </div>
         </div>
         <div class="hero-visual">
@@ -279,15 +63,55 @@
     <section class="pricing" id="pricing">
         <div class="pricing-card">
             <h3>الصندوق العشوائي المميز</h3>
-            <div class="price-tag">120 DH</div>
+            <div class="price-tag">299 DH</div>
             <p style="margin-bottom: 2rem; color: #94a3b8;">يحتوي على 3 إلى 7 منتجات عشوائية فاخرة</p>
-            <a href="https://wa.me/212600000000" class="btn btn-primary">اطلب عبر واتساب ✅</a>
+            <button onclick="openModal()" class="btn btn-primary">اطلب الآن</button>
         </div>
     </section>
+
+    <div id="paymentModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3>اختر طريقة الطلب</h3>
+            <div class="payment-options">
+                <a href="https://wa.me/212600000000?text=أريد+طلب+الصندوق+العشوائي" class="payment-item">
+                    <span class="pay-icon">💬</span>
+                    <div class="pay-text">
+                        <strong>الطلب عبر واتساب</strong>
+                        <p>تحدث معنا مباشرة لتأكيد طلبك</p>
+                    </div>
+                </a>
+                
+                <a href="#" class="payment-item" onclick="alert('خدمة الدفع بالبطاقة ستتوفر قريباً!')">
+                    <span class="pay-icon">💳</span>
+                    <div class="pay-text">
+                        <strong>بطاقة الدفع البنكية</strong>
+                        <p>دفع آمن وسريع عبر الإنترنت</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <p>جميع الحقوق محفوظة © 2026 عشوائيات حمزة</p>
     </footer>
 
+    <script>
+        function openModal() {
+            document.getElementById('paymentModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            let modal = document.getElementById('paymentModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>
