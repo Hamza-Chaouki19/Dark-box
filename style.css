@@ -1,81 +1,36 @@
-/* تحسين الخطوط والتنسيق العام */
 body {
     font-family: 'Cairo', sans-serif;
     margin: 0;
     padding: 0;
-    /* ربط الخلفية بالصورة الجديدة */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('bg.jpg.jpg');
+    /* ربط الصورة الصحيحة */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: #ffffff;
     direction: rtl;
-    line-height: 1.6;
 }
 
-/* حاوية المحتوى الرئيسية */
 .container {
-    max-width: 800px;
-    margin: 50px auto;
+    max-width: 90%;
+    margin: 20px auto;
     padding: 20px;
-    background: rgba(20, 20, 20, 0.85); /* خلفية شفافة سوداء للمحتوى */
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    text-align: center;
+    background: rgba(20, 20, 20, 0.8);
+    border-radius: 20px;
     border: 1px solid #444;
+    text-align: center;
 }
 
-/* تنسيق العناوين */
 h1 {
-    color: #ffd700; /* لون ذهبي للعنوان الرئيسي */
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    color: #ffcc00;
 }
 
-/* تنسيق صورة الصندوق في وسط الصفحة */
-.box-image {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    margin: 20px 0;
-    transition: transform 0.3s ease;
-}
-
-.box-image:hover {
-    transform: scale(1.05); /* تأثير تكبير عند تمرير الماوس */
-}
-
-/* زر الشراء النابض */
-.buy-button {
+.cta-button {
     display: inline-block;
-    padding: 15px 40px;
+    padding: 15px 30px;
     background-color: #ffcc00;
     color: #000;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
-    border-radius: 50px;
-    margin-top: 30px;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
-    animation: pulse 2s infinite; /* تأثير النبض */
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.buy-button:hover {
-    background-color: #e6b800;
-    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.5);
-}
-
-/* الأقسام الفرعية */
-.section {
-    margin-top: 40px;
-    padding: 20px;
-    border-top: 1px solid #333;
 }
