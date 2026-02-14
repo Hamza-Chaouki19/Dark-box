@@ -1,98 +1,55 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صندوق الغموض - Dark Mystery Box</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&family=Creepster&display=swap" rel="stylesheet">
+    <title>Dark Box | عالم الغموض</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="warning-tape">⚠️ محتوى غير معروف - دخول على مسؤوليتك الخاصة ⚠️</div>
-        
-        <h1 class="glitch-text">📦 صندوق الغموض المُظلم 📦</h1>
-        
-        <div class="mystery-box">
-            🎁
+
+    <header>
+        <div class="logo">DARK BOX</div>
+    </header>
+
+    <section class="hero">
+        <h1>اكتشف <span>المجهول</span></h1>
+        <p>لا نبيع مجرد صناديق، نحن نبيع الإثارة. هل أنت شجاع بما يكفي لفتح صندوقك الغامض اليوم؟</p>
+        <a href="#order" class="cta-button">اطلب صندوقك الآن 🔥</a>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <div class="icon">🎁</div>
+            <h3>محتوى فاخر</h3>
+            <p>منتجات مختارة بعناية تتجاوز قيمتها سعر الصندوق بأضعاف.</p>
         </div>
-        
-        <p class="subtitle">هل تجرؤ على فتح ما لا يُعرف؟</p>
-        
-        <div class="description">
-            <p>مرحباً بك في <strong>الجانب المظلم</strong> من التجارة الإلكترونية...</p>
-            <p>هذا ليس صندوقاً عادياً. محتوياته <strong>عشوائية تماماً</strong> ولا يمكن التنبؤ بها.</p>
-            <p>قد تجد <strong>كنزاً</strong> يغير حياتك... أو شيئاً يجعلك تندم على فضولك.</p>
-            <p><strong>لا استرداد. لا أسئلة. لا ضمانات.</strong></p>
+        <div class="feature-card">
+            <div class="icon">⚡</div>
+            <h3>توصيل صاروخي</h3>
+            <p>نصلك أينما كنت في المغرب خلال 24 إلى 48 ساعة فقط.</p>
         </div>
-
-        <div class="features">
-            <div class="feature-item">
-                <span>🎲</span>
-                <strong>عشوائي 100%</strong>
-                <p>لا أحد يعلم ما بداخله</p>
-            </div>
-            <div class="feature-item">
-                <span>🔒</span>
-                <strong>مُشفّر تماماً</strong>
-                <p>شحن سري ومجهول</p>
-            </div>
-            <div class="feature-item">
-                <span>⚡</span>
-                <strong>محدود</strong>
-                <p>الكمية شبه منتهية</p>
-            </div>
-            <div class="feature-item">
-                <span>👻</span>
-                <strong>غامض</strong>
-                <p>مغامرة لا تُنسى</p>
-            </div>
+        <div class="feature-card">
+            <div class="icon">💎</div>
+            <h3>نسخ محدودة</h3>
+            <p>نصدر كميات قليلة جداً كل شهر. لا تضيع فرصتك!</p>
         </div>
+    </section>
 
-        <div class="price">
-            ??? BTC
+    <section class="pricing" id="order">
+        <div class="price-box">
+            <h2>الصندوق الغامض - الإصدار الذهبي</h2>
+            <div class="price">199 DH</div>
+            <p>شحن مجاني + هدية إضافية لأول 10 طلبات</p>
+            <br>
+            <a href="https://wa.me/212600000000" class="cta-button">أرسل طلبك عبر واتساب</a>
         </div>
+    </section>
 
-        <a href="#order" class="cta-button">
-            اطلب الآن إن كنت تجرؤ
-        </a>
+    <footer>
+        <p>&copy; 2026 DARK BOX MAROC - جميع الحقوق محفوظة</p>
+    </footer>
 
-        <div class="disclaimer">
-            ⚠️ <strong>تحذير:</strong> هذا الصندوق للأشخاص المغامرين فقط. المحتويات عشوائية بالكامل وقد تختلف من صندوق لآخر. 
-            لا توجد أي ضمانات على المحتوى. بمجرد الطلب، لا يمكن الإلغاء أو الاسترداد. 
-            أنت توافق على تحمل كامل المسؤولية عن هذا القرار. البائع غير مسؤول عن أي نتائج.
-            <br><br>
-            🌐 التوصيل: عالمي | 📦 الشحن: مجهول | 💳 الدفع: عملات مشفرة فقط
-        </div>
-    </div>
-
-    <script>
-        // تأثير صوتي مرعب عند تحريك الماوس على الصندوق
-        const mysteryBox = document.querySelector('.mystery-box');
-        let rotationAngle = 0;
-        
-        mysteryBox.addEventListener('mousemove', (e) => {
-            const rect = mysteryBox.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-            
-            rotationAngle = Math.atan2(y, x) * (180 / Math.PI);
-            mysteryBox.style.transform = `perspective(1000px) rotateY(${x / 10}deg) rotateX(${-y / 10}deg)`;
-        });
-        
-        mysteryBox.addEventListener('mouseleave', () => {
-            mysteryBox.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
-        });
-
-        // تأثير الوميض العشوائي
-        setInterval(() => {
-            if (Math.random() > 0.7) {
-                document.body.style.filter = 'brightness(1.3)';
-                setTimeout(() => {
-                    document.body.style.filter = 'brightness(1)';
-                }, 50);
-            }
-        }, 3000);
-    </script>
 </body>
 </html>
