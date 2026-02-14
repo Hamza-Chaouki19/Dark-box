@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصندوق الغامض - اكتشف المجهول!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Changa:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">الصندوق الغامض</h1>
+            <nav class="nav-menu">
+                <a href="#about">ما هو الصندوق؟</a>
+                <a href="#how-it-works">كيف يعمل؟</a>
+                <a href="#order">اطلب الآن</a>
+            </nav>
+            <div class="burger-menu">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <p class="tagline">هل أنت مستعد للمغامرة؟</p>
+                <h2 class="main-title">اكتشف المجهول. احصل على صندوقك الغامض الآن!</h2>
+                <button class="buy-button pulse">اطلب صندوقك الغامض!</button>
+            </div>
+             <div class="mystery-box-image">
+                <img src="https://via.placeholder.com/300x300?text=صندوق+غامض" alt="صندوق غامض">
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h3 class="section-title">ما هو الصندوق الغامض؟</h3>
+                <p>إنه ليس مجرد صندوق، بل تجربة! كل صندوق يحتوي على مفاجأة فريدة ومنتجات مختارة بعناية، لا أحد يعلم ما بداخله حتى لحظة فتحه. هل أنت شجاع بما يكفي لتخوض هذه المغامرة؟</p>
+                <div class="mystery-icons">
+                    <div>
+                        <span class="icon">🎁</span>
+                        <p>مفاجآت فريدة</p>
+                    </div>
+                    <div>
+                        <span class="icon">✨</span>
+                        <p>منتجات حصرية</p>
+                    </div>
+                    <div>
+                        <span class="icon">🔮</span>
+                        <p>إثارة التشويق</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works-section">
+            <div class="container">
+                <h3 class="section-title">كيف يعمل؟</h3>
+                <div class="steps-grid">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <h4>اطلب صندوقك</h4>
+                        <p>اختر الصندوق الذي يناسب فضولك. نحن نعد بأن المفاجأة تستحق.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <h4>انتظر وصوله</h4>
+                        <p>الغموض سيزداد مع كل يوم. الصبر مفتاح الكنز!</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <h4>اكتشف المفاجأة!</h4>
+                        <p>افتح الصندوق وانغمس في عالم من الدهشة. شاركنا تجربتك!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="order" class="order-section">
+            <div class="container">
+                <h3 class="section-title">اطلب صندوقك الآن!</h3>
+                <p class="order-text">لا تدع الفرصة تفوتك. المغامرة في انتظارك.</p>
+                <button class="buy-button large-button pulse">أريد صندوقي الغامض!</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 الصندوق الغامض. جميع الحقوق محفوظة.</p>
+            <div class="social-links">
+                <a href="#" target="_blank">✉️</a>
+                <a href="#" target="_blank">📞</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.burger-menu').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
